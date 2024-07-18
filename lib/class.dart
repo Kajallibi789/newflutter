@@ -3,6 +3,35 @@ class x {
   static const int i = 10; //class property
   x(this.name);
 }
+class A {
+  late int q;
+  late int w;
+
+  A(this.q, this.w) {
+    print(q);
+  }
+  void sowum(){
+    print(q+w);
+  }
+}
+
+class Y extends A{
+  late double z;
+  Y(int w , int q, this.z):super(w, q);
+  void sowum(){
+    super.sowum();
+    print(z);
+  }
+}
+class GetterSetter{
+  late String geekname;
+  String get getname{
+    return geekname;
+  }
+  set setname(String geakname){
+    geekname = geakname;
+  }
+}
 
 class student{
   late String name;
@@ -32,4 +61,7 @@ student2.cummulative_marks();
 student1.cummulative_marks();
 x x1 =x('jack');
 print(x1.name);
+Y y = Y(1, 2, 3);
+y.sowum();
+
 }
